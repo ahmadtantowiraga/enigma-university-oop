@@ -1,8 +1,7 @@
 import java.util.Scanner;
 public class Menu {
-    public Operation operation;
     public CollegeStudent collegeStudents;
-
+    Operation operation=new Operation();
 
     public void showMenu(){
         while (true) {
@@ -54,7 +53,6 @@ public class Menu {
         collegeStudent.setAge(Integer.parseInt(inputData()));
         System.out.println("Major (max 10 characters):");
         collegeStudent.setMajor(inputData());
-        Operation operation=new Operation();
         operation.addOperation(collegeStudent);
     }
 

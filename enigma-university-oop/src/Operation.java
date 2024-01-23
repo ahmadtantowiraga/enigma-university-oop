@@ -20,6 +20,7 @@ public class Operation {
         for (int i = collegeStudents.length-1; i >= 0; i--) {
             if(collegeStudents[i]!=null){
                 collegeStudents[i]=null;
+                break;
             }
         }
     }
