@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Menu {
     public CollegeStudent collegeStudent;
+    public Operation operation;
     public Menu(){
         showMenu();
     }
