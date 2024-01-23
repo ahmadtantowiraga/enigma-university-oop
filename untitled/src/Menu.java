@@ -51,6 +51,7 @@ public class Menu {
         collegeStudent.setAge(Integer.parseInt(inputData()));
         System.out.println("Major (max 10 characters):");
         collegeStudent.setMajor(inputData());
+        operation.addOperation(new CollegeStudent());
     }
 
     public void deleteCollegeStudent(){

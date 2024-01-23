@@ -3,7 +3,7 @@ public class CollegeStudent extends Menu {
     private String major;
     private Integer age;
 
-    public CollegeStudent(String name, String major, Integer age) {
+    public CollegeStudent() {
         this.name = name;
         this.major = major;
         this.age = age;
@@ -56,5 +56,10 @@ public class CollegeStudent extends Menu {
             this.inputData();
             super.addCollegeStudent();
         }
+    }
+    public void display(){
+        System.out.println("Name    : "+ this.name);
+        System.out.println("Age     : "+ this.age);
+        System.out.println("Jurusan : "+ this.major);
     }
 }
