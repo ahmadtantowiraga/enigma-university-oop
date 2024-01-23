@@ -67,7 +67,14 @@ public class Menu {
         System.out.println("--------------------------------------");
         System.out.println("View all College Student");
         System.out.println("--------------------------------------");
-
+        int no=1;
+        for (int i = 0; i < 5; i++) {
+            if (operation.collegeStudents[i]!=null){
+                no+=1;
+                System.out.println(no+".");
+                operation.collegeStudents[i].display();
+            }
+        }
     }
 
     public String inputData(){
