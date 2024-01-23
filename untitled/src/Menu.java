@@ -1,10 +1,12 @@
 import java.util.Scanner;
 public class Menu {
     public CollegeStudent collegeStudent;
+    public Menu(){
+        showMenu();
+    }
 
     public void showMenu(){
-        boolean loop=true;
-        while (loop) {
+        while (true) {
             String noMenu;
             do {
                 System.out.println("--------------------------------------");
@@ -21,9 +23,9 @@ public class Menu {
                     System.out.println("Tekan ENTER untuk melanjutkan");
                     inputData();
                 }
-            } while (Integer.parseInt(noMenu) > 0 && Integer.parseInt(noMenu) < 4);
+            } while (Integer.parseInt(noMenu) < 1 && Integer.parseInt(noMenu) > 4);
             if (noMenu.equals("4")){
-                loop=false;
+                break;
             }
             switch (noMenu) {
                 case "1":

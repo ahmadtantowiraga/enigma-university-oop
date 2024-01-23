@@ -1,4 +1,4 @@
-public class CollegeStudent {
+public class CollegeStudent extends Menu {
     private String name;
     private String major;
     private Integer age;
@@ -14,7 +14,15 @@ public class CollegeStudent {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.length() > 2 && name.length() < 21){
+            this.name = name;
+        }else{
+            System.out.println("input 3-20 Characters");
+            System.out.println();
+            System.out.println("Klik ENTER Untuk melanjutkan");
+            this.inputData();
+            super.addCollegeStudent();
+        }
     }
 
     public String getMajor() {
