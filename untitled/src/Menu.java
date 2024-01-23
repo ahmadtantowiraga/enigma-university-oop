@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class Menu {
-    public CollegeStudent collegeStudent;
     public Operation operation;
     public Menu(){
         showMenu();
@@ -8,8 +7,9 @@ public class Menu {
 
     public void showMenu(){
         while (true) {
-            String noMenu;
-            do {
+            String noMenu=null;
+            boolean check=true;
+            while(check){
                 System.out.println("--------------------------------------");
                 System.out.println("Main Menu");
                 System.out.println("--------------------------------------");
@@ -23,25 +23,29 @@ public class Menu {
                     System.out.println("Masukan NO MENU yang benar");
                     System.out.println("Tekan ENTER untuk melanjutkan");
                     inputData();
+                }else{
+                    check=false;
                 }
-            } while (Integer.parseInt(noMenu) < 1 && Integer.parseInt(noMenu) > 4);
+            }
             if (noMenu.equals("4")){
                 break;
-            }
-            switch (noMenu) {
-                case "1":
-                    addCollegeStudent();
-                    break;
-                case "2":
-                    deleteCollegeStudent();
-                    break;
-                case "3":
-                    viewAllCollegeStudent();
-                    break;
+            }else {
+                switch (noMenu) {
+                    case "1":
+                        addCollegeStudent();
+                        break;
+                    case "2":
+                        deleteCollegeStudent();
+                        break;
+                    case "3":
+                        viewAllCollegeStudent();
+                        break;
+                }
             }
         }
     }
     public void addCollegeStudent(){
+        CollegeStudent collegeStudent=new CollegeStudent();
         System.out.println("--------------------------------------");
         System.out.println("Add College Student");
         System.out.println("--------------------------------------");
@@ -51,14 +55,13 @@ public class Menu {
         collegeStudent.setAge(Integer.parseInt(inputData()));
         System.out.println("Major (max 10 characters):");
         collegeStudent.setMajor(inputData());
-        operation.addOperation(new CollegeStudent());
+        operation.addOperation(collegeStudent);
     }
 
     public void deleteCollegeStudent(){
         System.out.println("--------------------------------------");
         System.out.println("Delete College Student");
         System.out.println("--------------------------------------");
-
         System.out.println("Mahasiswa yang terakhir masuk di delete:");
         System.out.println("Successfully Deleting Student");
     }
