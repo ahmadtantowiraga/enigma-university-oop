@@ -14,5 +14,10 @@ public class Operation {
         if (collegeStudents[0]==null){
             System.out.println("Cannot delete data because it is still empty");
         }
+        for (int i = collegeStudents.length-1; i >= 0; i--) {
+            if(collegeStudents[i]!=null){
+                collegeStudents[i]=null;
+            }
+        }
     }
 }
