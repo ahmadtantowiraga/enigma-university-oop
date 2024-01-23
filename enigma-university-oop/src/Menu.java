@@ -78,8 +78,6 @@ public class Menu {
                 System.out.println(no+".");
                 operation.collegeStudents[i].display();
                 System.out.println();
-                System.out.println("Tekan Enter untuk Melanjutkan");
-                inputData();
             }
         }
     }
