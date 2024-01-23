@@ -2,19 +2,16 @@ public class CollegeStudent {
     private String name;
     private String major;
     private Integer age;
-    public Menu menu;
 
-    public CollegeStudent() {
-        this.name = name;
-        this.major = major;
-        this.age = age;
-    }
+
+
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
+        Menu menu=new Menu();
         if (name.length() > 2 && name.length() < 21){
             this.name = name;
         }else{
@@ -31,6 +28,7 @@ public class CollegeStudent {
     }
 
     public void setMajor(String major) {
+        Menu menu=new Menu();
         if (major.length() < 10) {
             this.major = major;
         }else{
@@ -48,6 +46,7 @@ public class CollegeStudent {
     }
 
     public void setAge(Integer age) {
+        Menu menu=new Menu();
         if (age >= 17) {
             this.age = age;
         }else{

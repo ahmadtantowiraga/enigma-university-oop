@@ -1,9 +1,8 @@
 import java.util.Scanner;
 public class Menu {
     public Operation operation;
-    public Menu(){
-        showMenu();
-    }
+    public CollegeStudent collegeStudents;
+
 
     public void showMenu(){
         while (true) {
@@ -55,6 +54,7 @@ public class Menu {
         collegeStudent.setAge(Integer.parseInt(inputData()));
         System.out.println("Major (max 10 characters):");
         collegeStudent.setMajor(inputData());
+        Operation operation=new Operation();
         operation.addOperation(collegeStudent);
     }
 
@@ -62,6 +62,7 @@ public class Menu {
         System.out.println("--------------------------------------");
         System.out.println("Delete College Student");
         System.out.println("--------------------------------------");
+        operation.deleteOperation();
         System.out.println("Mahasiswa yang terakhir masuk di delete:");
         System.out.println("Successfully Deleting Student");
     }
@@ -70,12 +71,15 @@ public class Menu {
         System.out.println("--------------------------------------");
         System.out.println("View all College Student");
         System.out.println("--------------------------------------");
-        int no=1;
+        int no=0;
         for (int i = 0; i < 5; i++) {
             if (operation.collegeStudents[i]!=null){
                 no+=1;
                 System.out.println(no+".");
                 operation.collegeStudents[i].display();
+                System.out.println();
+                System.out.println("Tekan Enter untuk Melanjutkan");
+                inputData();
             }
         }
     }
