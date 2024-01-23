@@ -30,7 +30,15 @@ public class CollegeStudent extends Menu {
     }
 
     public void setMajor(String major) {
-        this.major = major;
+        if (major.length() < 10) {
+            this.major = major;
+        }else{
+            System.out.println("Max major 10 characters");
+            System.out.println();
+            System.out.println("Klik ENTER Untuk melanjutkan");
+            this.inputData();
+            super.addCollegeStudent();
+        }
     }
 
     public Integer getAge() {
