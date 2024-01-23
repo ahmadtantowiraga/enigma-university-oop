@@ -34,10 +34,19 @@ public class CollegeStudent extends Menu {
     }
 
     public Integer getAge() {
+
         return age;
     }
 
     public void setAge(Integer age) {
-        this.age = age;
+        if (age >= 17) {
+            this.age = age;
+        }else{
+            System.out.println("Min age 17 years");
+            System.out.println();
+            System.out.println("Klik ENTER Untuk melanjutkan");
+            this.inputData();
+            super.addCollegeStudent();
+        }
     }
 }
