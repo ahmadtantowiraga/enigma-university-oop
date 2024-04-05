@@ -29,7 +29,7 @@ public class CollegeStudent {
 
     public void setMajor(String major) {
         Menu menu=new Menu();
-        if (major.length() < 10) {
+        if (major.length() <= 10) {
             this.major = major;
         }else{
             System.out.println("Max major 10 characters");

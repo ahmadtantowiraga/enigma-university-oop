@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class Menu {
-    public CollegeStudent collegeStudents;
     Operation operation=new Operation();
 
     public void showMenu(){
@@ -53,6 +52,7 @@ public class Menu {
         collegeStudent.setAge(Integer.parseInt(inputData()));
         System.out.println("Major (max 10 characters):");
         collegeStudent.setMajor(inputData());
+
         operation.addOperation(collegeStudent);
     }
 

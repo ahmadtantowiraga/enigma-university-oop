@@ -1,5 +1,5 @@
 public class Operation {
-    static CollegeStudent[] collegeStudents=new CollegeStudent[5];
+    CollegeStudent[] collegeStudents=new CollegeStudent[5];
 
 
     public void addOperation(CollegeStudent collegeStudent){
